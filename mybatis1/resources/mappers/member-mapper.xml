@@ -39,9 +39,20 @@
 	 	<result column="status" property="status"/>
 	 </resultMap>
 	 
-	 <select id="loginMember" resultMap="memberResultSet" parameterType="com.mybatis.member.vo.Member">
+	 <select id="loginMember" resultMap="memberResultSet" parameterType="Member">
 	 	select *
 	 	  from member
 	 	  where user_id = #{userId} and user_pwd = #{userPwd} and status = 'Y'
 	 </select>
+	 
+	 <select id="checkId" resultType="_int">
+	 	select count(*)
+	 	  from member
+	 	  where user_id = #{userId}
+	 </select>
+	 
+	 <insert id="insertMember" parameterType="Member">
+	 	insert into member
+	 	values(#{userId},#{userPwd},#{userName},#{email},#{birthday},#{gender},#{phone},#{address},default,default,default)
+	 </insert>
 </mapper>

@@ -38,6 +38,13 @@
 		vertical-align: middle;
 		line-height: 50px;
 	}
+	.outer {
+		text-align: center;
+	}
+	.outer table tr{
+		text-align: left;
+		height: 30px;
+	}
 </style>
 </head>
 <body>
@@ -60,7 +67,7 @@
 						</tr>
 						<tr>
 							<td colspan="3" align="center">
-								<a href="">회원가입</a>
+								<a href="enrollForm.me">회원가입</a>
 								<a href="">아이디/비번찾기</a>
 							</td>
 						</tr>
@@ -82,10 +89,10 @@
 	</div>
 	<br>
 	<div class="nav-area" align="center">
-		<div type="button" class="menu">HOME</div>
-		<div type="button" class="menu">공지사항</div>
-		<div type="button" class="menu" onclick="">게시판</div>
-		<div type="button" class="menu">ETC</div>
+		<div class="menu">HOME</div>
+		<div class="menu">공지사항</div>
+		<div class="menu" onclick="location.href='list.bo?nowPage=1'">게시판</div>
+		<div class="menu">ETC</div>
 	</div>
 </body>
 </html>

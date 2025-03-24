@@ -39,6 +39,7 @@
 	 	<result column="status" property="status"/>
 	 </resultMap>
 	 
+	 
 	 <select id="loginMember" resultMap="memberResultSet" parameterType="Member">
 	 	select *
 	 	  from member

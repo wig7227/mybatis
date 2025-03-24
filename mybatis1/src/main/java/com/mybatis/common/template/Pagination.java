@@ -15,5 +15,5 @@ public class Pagination {
 		PageInfo pi = new PageInfo(totalRecord, nowPage, numPerPage, pagePerBlock, totalPage, startPage, endPage);
 		return pi;
 	}
-		
+	
 }
